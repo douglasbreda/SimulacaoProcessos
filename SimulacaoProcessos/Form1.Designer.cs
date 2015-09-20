@@ -63,29 +63,29 @@
             this.bsoUniforme = new System.Windows.Forms.BindingSource(this.components);
             this.radUniforme = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pnlSimulacao = new System.Windows.Forms.Panel();
+            this.pnlBotoesSimulacao = new System.Windows.Forms.Panel();
+            this.btnParar = new System.Windows.Forms.Button();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.pnlEntradaUsuario = new System.Windows.Forms.Panel();
-            this.lblEntradaA = new System.Windows.Forms.Label();
-            this.pnlA = new System.Windows.Forms.Panel();
-            this.txtEntradaA = new System.Windows.Forms.TextBox();
-            this.pnlB = new System.Windows.Forms.Panel();
-            this.txtEntradaB = new System.Windows.Forms.TextBox();
-            this.lblEntradaB = new System.Windows.Forms.Label();
-            this.pnlC = new System.Windows.Forms.Panel();
-            this.txtEntradaC = new System.Windows.Forms.TextBox();
-            this.lblEntradaC = new System.Windows.Forms.Label();
-            this.pnlLambda = new System.Windows.Forms.Panel();
-            this.txtEntradaLambda = new System.Windows.Forms.TextBox();
-            this.lblEntradaLambda = new System.Windows.Forms.Label();
-            this.pnlMedia = new System.Windows.Forms.Panel();
-            this.txtEntradaMedia = new System.Windows.Forms.TextBox();
-            this.lblEntradaMedia = new System.Windows.Forms.Label();
             this.pnlDesvio = new System.Windows.Forms.Panel();
             this.txtEntradaDesvioPadrao = new System.Windows.Forms.TextBox();
             this.lblEntradaDesvioPadrao = new System.Windows.Forms.Label();
-            this.pnlBotoesSimulacao = new System.Windows.Forms.Panel();
-            this.btnIniciar = new System.Windows.Forms.Button();
-            this.btnParar = new System.Windows.Forms.Button();
-            this.pnlSimulacao = new System.Windows.Forms.Panel();
+            this.pnlMedia = new System.Windows.Forms.Panel();
+            this.txtEntradaMedia = new System.Windows.Forms.TextBox();
+            this.lblEntradaMedia = new System.Windows.Forms.Label();
+            this.pnlLambda = new System.Windows.Forms.Panel();
+            this.txtEntradaLambda = new System.Windows.Forms.TextBox();
+            this.lblEntradaLambda = new System.Windows.Forms.Label();
+            this.pnlC = new System.Windows.Forms.Panel();
+            this.txtEntradaC = new System.Windows.Forms.TextBox();
+            this.lblEntradaC = new System.Windows.Forms.Label();
+            this.pnlB = new System.Windows.Forms.Panel();
+            this.txtEntradaB = new System.Windows.Forms.TextBox();
+            this.lblEntradaB = new System.Windows.Forms.Label();
+            this.pnlA = new System.Windows.Forms.Panel();
+            this.txtEntradaA = new System.Windows.Forms.TextBox();
+            this.lblEntradaA = new System.Windows.Forms.Label();
             this.tbcPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pnlConfig.SuspendLayout();
@@ -104,14 +104,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.grfUniforme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.pnlEntradaUsuario.SuspendLayout();
-            this.pnlA.SuspendLayout();
-            this.pnlB.SuspendLayout();
-            this.pnlC.SuspendLayout();
-            this.pnlLambda.SuspendLayout();
-            this.pnlMedia.SuspendLayout();
-            this.pnlDesvio.SuspendLayout();
             this.pnlBotoesSimulacao.SuspendLayout();
+            this.pnlEntradaUsuario.SuspendLayout();
+            this.pnlDesvio.SuspendLayout();
+            this.pnlMedia.SuspendLayout();
+            this.pnlLambda.SuspendLayout();
+            this.pnlC.SuspendLayout();
+            this.pnlB.SuspendLayout();
+            this.pnlA.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcPrincipal
@@ -181,7 +181,7 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Triangular";
             series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.XValueMember = "X";
             series1.YValueMembers = "Y";
@@ -228,7 +228,7 @@
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Exponencial";
             series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series2.XValueMember = "X";
             series2.YValueMembers = "Y";
@@ -285,7 +285,7 @@
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series3.Legend = "Legend1";
-            series3.Name = "Series1";
+            series3.Name = "Uniforme";
             series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series3.XValueMember = "X";
             series3.YValueMembers = "Y";
@@ -332,7 +332,7 @@
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Legend = "Legend1";
-            series4.Name = "Series1";
+            series4.Name = "Uniforme";
             series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series4.XValueMember = "X";
             series4.YValueMembers = "Y";
@@ -368,6 +368,47 @@
             this.tabPage2.Text = "Simulação";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pnlSimulacao
+            // 
+            this.pnlSimulacao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlSimulacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSimulacao.Location = new System.Drawing.Point(3, 85);
+            this.pnlSimulacao.Name = "pnlSimulacao";
+            this.pnlSimulacao.Size = new System.Drawing.Size(614, 331);
+            this.pnlSimulacao.TabIndex = 3;
+            // 
+            // pnlBotoesSimulacao
+            // 
+            this.pnlBotoesSimulacao.Controls.Add(this.btnParar);
+            this.pnlBotoesSimulacao.Controls.Add(this.btnIniciar);
+            this.pnlBotoesSimulacao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBotoesSimulacao.Location = new System.Drawing.Point(3, 59);
+            this.pnlBotoesSimulacao.Name = "pnlBotoesSimulacao";
+            this.pnlBotoesSimulacao.Size = new System.Drawing.Size(614, 26);
+            this.pnlBotoesSimulacao.TabIndex = 2;
+            // 
+            // btnParar
+            // 
+            this.btnParar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnParar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParar.Location = new System.Drawing.Point(83, 0);
+            this.btnParar.Name = "btnParar";
+            this.btnParar.Size = new System.Drawing.Size(83, 26);
+            this.btnParar.TabIndex = 1;
+            this.btnParar.Text = "Parar";
+            this.btnParar.UseVisualStyleBackColor = true;
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciar.Location = new System.Drawing.Point(0, 0);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(83, 26);
+            this.btnIniciar.TabIndex = 0;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            // 
             // pnlEntradaUsuario
             // 
             this.pnlEntradaUsuario.Controls.Add(this.pnlDesvio);
@@ -381,146 +422,6 @@
             this.pnlEntradaUsuario.Name = "pnlEntradaUsuario";
             this.pnlEntradaUsuario.Size = new System.Drawing.Size(614, 56);
             this.pnlEntradaUsuario.TabIndex = 0;
-            // 
-            // lblEntradaA
-            // 
-            this.lblEntradaA.AutoSize = true;
-            this.lblEntradaA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEntradaA.Location = new System.Drawing.Point(0, 0);
-            this.lblEntradaA.Name = "lblEntradaA";
-            this.lblEntradaA.Size = new System.Drawing.Size(54, 13);
-            this.lblEntradaA.TabIndex = 3;
-            this.lblEntradaA.Text = "Entrada A";
-            // 
-            // pnlA
-            // 
-            this.pnlA.Controls.Add(this.txtEntradaA);
-            this.pnlA.Controls.Add(this.lblEntradaA);
-            this.pnlA.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlA.Location = new System.Drawing.Point(0, 0);
-            this.pnlA.Name = "pnlA";
-            this.pnlA.Size = new System.Drawing.Size(89, 56);
-            this.pnlA.TabIndex = 6;
-            // 
-            // txtEntradaA
-            // 
-            this.txtEntradaA.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtEntradaA.Location = new System.Drawing.Point(0, 13);
-            this.txtEntradaA.Name = "txtEntradaA";
-            this.txtEntradaA.Size = new System.Drawing.Size(86, 20);
-            this.txtEntradaA.TabIndex = 4;
-            // 
-            // pnlB
-            // 
-            this.pnlB.Controls.Add(this.txtEntradaB);
-            this.pnlB.Controls.Add(this.lblEntradaB);
-            this.pnlB.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlB.Location = new System.Drawing.Point(89, 0);
-            this.pnlB.Name = "pnlB";
-            this.pnlB.Size = new System.Drawing.Size(89, 56);
-            this.pnlB.TabIndex = 7;
-            // 
-            // txtEntradaB
-            // 
-            this.txtEntradaB.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtEntradaB.Location = new System.Drawing.Point(0, 13);
-            this.txtEntradaB.Name = "txtEntradaB";
-            this.txtEntradaB.Size = new System.Drawing.Size(86, 20);
-            this.txtEntradaB.TabIndex = 4;
-            // 
-            // lblEntradaB
-            // 
-            this.lblEntradaB.AutoSize = true;
-            this.lblEntradaB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEntradaB.Location = new System.Drawing.Point(0, 0);
-            this.lblEntradaB.Name = "lblEntradaB";
-            this.lblEntradaB.Size = new System.Drawing.Size(54, 13);
-            this.lblEntradaB.TabIndex = 3;
-            this.lblEntradaB.Text = "Entrada B";
-            // 
-            // pnlC
-            // 
-            this.pnlC.Controls.Add(this.txtEntradaC);
-            this.pnlC.Controls.Add(this.lblEntradaC);
-            this.pnlC.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlC.Location = new System.Drawing.Point(178, 0);
-            this.pnlC.Name = "pnlC";
-            this.pnlC.Size = new System.Drawing.Size(89, 56);
-            this.pnlC.TabIndex = 8;
-            // 
-            // txtEntradaC
-            // 
-            this.txtEntradaC.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtEntradaC.Location = new System.Drawing.Point(0, 13);
-            this.txtEntradaC.Name = "txtEntradaC";
-            this.txtEntradaC.Size = new System.Drawing.Size(86, 20);
-            this.txtEntradaC.TabIndex = 4;
-            // 
-            // lblEntradaC
-            // 
-            this.lblEntradaC.AutoSize = true;
-            this.lblEntradaC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEntradaC.Location = new System.Drawing.Point(0, 0);
-            this.lblEntradaC.Name = "lblEntradaC";
-            this.lblEntradaC.Size = new System.Drawing.Size(54, 13);
-            this.lblEntradaC.TabIndex = 3;
-            this.lblEntradaC.Text = "Entrada C";
-            // 
-            // pnlLambda
-            // 
-            this.pnlLambda.Controls.Add(this.txtEntradaLambda);
-            this.pnlLambda.Controls.Add(this.lblEntradaLambda);
-            this.pnlLambda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLambda.Location = new System.Drawing.Point(267, 0);
-            this.pnlLambda.Name = "pnlLambda";
-            this.pnlLambda.Size = new System.Drawing.Size(89, 56);
-            this.pnlLambda.TabIndex = 9;
-            // 
-            // txtEntradaLambda
-            // 
-            this.txtEntradaLambda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtEntradaLambda.Location = new System.Drawing.Point(0, 13);
-            this.txtEntradaLambda.Name = "txtEntradaLambda";
-            this.txtEntradaLambda.Size = new System.Drawing.Size(86, 20);
-            this.txtEntradaLambda.TabIndex = 4;
-            // 
-            // lblEntradaLambda
-            // 
-            this.lblEntradaLambda.AutoSize = true;
-            this.lblEntradaLambda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEntradaLambda.Location = new System.Drawing.Point(0, 0);
-            this.lblEntradaLambda.Name = "lblEntradaLambda";
-            this.lblEntradaLambda.Size = new System.Drawing.Size(52, 13);
-            this.lblEntradaLambda.TabIndex = 3;
-            this.lblEntradaLambda.Text = "Entrada λ";
-            // 
-            // pnlMedia
-            // 
-            this.pnlMedia.Controls.Add(this.txtEntradaMedia);
-            this.pnlMedia.Controls.Add(this.lblEntradaMedia);
-            this.pnlMedia.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMedia.Location = new System.Drawing.Point(356, 0);
-            this.pnlMedia.Name = "pnlMedia";
-            this.pnlMedia.Size = new System.Drawing.Size(89, 56);
-            this.pnlMedia.TabIndex = 10;
-            // 
-            // txtEntradaMedia
-            // 
-            this.txtEntradaMedia.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtEntradaMedia.Location = new System.Drawing.Point(0, 13);
-            this.txtEntradaMedia.Name = "txtEntradaMedia";
-            this.txtEntradaMedia.Size = new System.Drawing.Size(86, 20);
-            this.txtEntradaMedia.TabIndex = 4;
-            // 
-            // lblEntradaMedia
-            // 
-            this.lblEntradaMedia.AutoSize = true;
-            this.lblEntradaMedia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEntradaMedia.Location = new System.Drawing.Point(0, 0);
-            this.lblEntradaMedia.Name = "lblEntradaMedia";
-            this.lblEntradaMedia.Size = new System.Drawing.Size(53, 13);
-            this.lblEntradaMedia.TabIndex = 3;
-            this.lblEntradaMedia.Text = "Entrada μ";
             // 
             // pnlDesvio
             // 
@@ -550,46 +451,145 @@
             this.lblEntradaDesvioPadrao.TabIndex = 3;
             this.lblEntradaDesvioPadrao.Text = "Entrada σ";
             // 
-            // pnlBotoesSimulacao
+            // pnlMedia
             // 
-            this.pnlBotoesSimulacao.Controls.Add(this.btnParar);
-            this.pnlBotoesSimulacao.Controls.Add(this.btnIniciar);
-            this.pnlBotoesSimulacao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBotoesSimulacao.Location = new System.Drawing.Point(3, 59);
-            this.pnlBotoesSimulacao.Name = "pnlBotoesSimulacao";
-            this.pnlBotoesSimulacao.Size = new System.Drawing.Size(614, 26);
-            this.pnlBotoesSimulacao.TabIndex = 2;
+            this.pnlMedia.Controls.Add(this.txtEntradaMedia);
+            this.pnlMedia.Controls.Add(this.lblEntradaMedia);
+            this.pnlMedia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMedia.Location = new System.Drawing.Point(356, 0);
+            this.pnlMedia.Name = "pnlMedia";
+            this.pnlMedia.Size = new System.Drawing.Size(89, 56);
+            this.pnlMedia.TabIndex = 10;
             // 
-            // btnIniciar
+            // txtEntradaMedia
             // 
-            this.btnIniciar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciar.Location = new System.Drawing.Point(0, 0);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(83, 26);
-            this.btnIniciar.TabIndex = 0;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.txtEntradaMedia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtEntradaMedia.Location = new System.Drawing.Point(0, 13);
+            this.txtEntradaMedia.Name = "txtEntradaMedia";
+            this.txtEntradaMedia.Size = new System.Drawing.Size(86, 20);
+            this.txtEntradaMedia.TabIndex = 4;
             // 
-            // btnParar
+            // lblEntradaMedia
             // 
-            this.btnParar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnParar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnParar.Location = new System.Drawing.Point(83, 0);
-            this.btnParar.Name = "btnParar";
-            this.btnParar.Size = new System.Drawing.Size(83, 26);
-            this.btnParar.TabIndex = 1;
-            this.btnParar.Text = "Parar";
-            this.btnParar.UseVisualStyleBackColor = true;
+            this.lblEntradaMedia.AutoSize = true;
+            this.lblEntradaMedia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEntradaMedia.Location = new System.Drawing.Point(0, 0);
+            this.lblEntradaMedia.Name = "lblEntradaMedia";
+            this.lblEntradaMedia.Size = new System.Drawing.Size(53, 13);
+            this.lblEntradaMedia.TabIndex = 3;
+            this.lblEntradaMedia.Text = "Entrada μ";
             // 
-            // pnlSimulacao
+            // pnlLambda
             // 
-            this.pnlSimulacao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlSimulacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSimulacao.Location = new System.Drawing.Point(3, 85);
-            this.pnlSimulacao.Name = "pnlSimulacao";
-            this.pnlSimulacao.Size = new System.Drawing.Size(614, 331);
-            this.pnlSimulacao.TabIndex = 3;
+            this.pnlLambda.Controls.Add(this.txtEntradaLambda);
+            this.pnlLambda.Controls.Add(this.lblEntradaLambda);
+            this.pnlLambda.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLambda.Location = new System.Drawing.Point(267, 0);
+            this.pnlLambda.Name = "pnlLambda";
+            this.pnlLambda.Size = new System.Drawing.Size(89, 56);
+            this.pnlLambda.TabIndex = 9;
+            // 
+            // txtEntradaLambda
+            // 
+            this.txtEntradaLambda.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtEntradaLambda.Location = new System.Drawing.Point(0, 13);
+            this.txtEntradaLambda.Name = "txtEntradaLambda";
+            this.txtEntradaLambda.Size = new System.Drawing.Size(86, 20);
+            this.txtEntradaLambda.TabIndex = 4;
+            // 
+            // lblEntradaLambda
+            // 
+            this.lblEntradaLambda.AutoSize = true;
+            this.lblEntradaLambda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEntradaLambda.Location = new System.Drawing.Point(0, 0);
+            this.lblEntradaLambda.Name = "lblEntradaLambda";
+            this.lblEntradaLambda.Size = new System.Drawing.Size(52, 13);
+            this.lblEntradaLambda.TabIndex = 3;
+            this.lblEntradaLambda.Text = "Entrada λ";
+            // 
+            // pnlC
+            // 
+            this.pnlC.Controls.Add(this.txtEntradaC);
+            this.pnlC.Controls.Add(this.lblEntradaC);
+            this.pnlC.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlC.Location = new System.Drawing.Point(178, 0);
+            this.pnlC.Name = "pnlC";
+            this.pnlC.Size = new System.Drawing.Size(89, 56);
+            this.pnlC.TabIndex = 8;
+            // 
+            // txtEntradaC
+            // 
+            this.txtEntradaC.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtEntradaC.Location = new System.Drawing.Point(0, 13);
+            this.txtEntradaC.Name = "txtEntradaC";
+            this.txtEntradaC.Size = new System.Drawing.Size(86, 20);
+            this.txtEntradaC.TabIndex = 4;
+            // 
+            // lblEntradaC
+            // 
+            this.lblEntradaC.AutoSize = true;
+            this.lblEntradaC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEntradaC.Location = new System.Drawing.Point(0, 0);
+            this.lblEntradaC.Name = "lblEntradaC";
+            this.lblEntradaC.Size = new System.Drawing.Size(54, 13);
+            this.lblEntradaC.TabIndex = 3;
+            this.lblEntradaC.Text = "Entrada C";
+            // 
+            // pnlB
+            // 
+            this.pnlB.Controls.Add(this.txtEntradaB);
+            this.pnlB.Controls.Add(this.lblEntradaB);
+            this.pnlB.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlB.Location = new System.Drawing.Point(89, 0);
+            this.pnlB.Name = "pnlB";
+            this.pnlB.Size = new System.Drawing.Size(89, 56);
+            this.pnlB.TabIndex = 7;
+            // 
+            // txtEntradaB
+            // 
+            this.txtEntradaB.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtEntradaB.Location = new System.Drawing.Point(0, 13);
+            this.txtEntradaB.Name = "txtEntradaB";
+            this.txtEntradaB.Size = new System.Drawing.Size(86, 20);
+            this.txtEntradaB.TabIndex = 4;
+            // 
+            // lblEntradaB
+            // 
+            this.lblEntradaB.AutoSize = true;
+            this.lblEntradaB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEntradaB.Location = new System.Drawing.Point(0, 0);
+            this.lblEntradaB.Name = "lblEntradaB";
+            this.lblEntradaB.Size = new System.Drawing.Size(54, 13);
+            this.lblEntradaB.TabIndex = 3;
+            this.lblEntradaB.Text = "Entrada B";
+            // 
+            // pnlA
+            // 
+            this.pnlA.Controls.Add(this.txtEntradaA);
+            this.pnlA.Controls.Add(this.lblEntradaA);
+            this.pnlA.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlA.Location = new System.Drawing.Point(0, 0);
+            this.pnlA.Name = "pnlA";
+            this.pnlA.Size = new System.Drawing.Size(89, 56);
+            this.pnlA.TabIndex = 6;
+            // 
+            // txtEntradaA
+            // 
+            this.txtEntradaA.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtEntradaA.Location = new System.Drawing.Point(0, 13);
+            this.txtEntradaA.Name = "txtEntradaA";
+            this.txtEntradaA.Size = new System.Drawing.Size(86, 20);
+            this.txtEntradaA.TabIndex = 4;
+            // 
+            // lblEntradaA
+            // 
+            this.lblEntradaA.AutoSize = true;
+            this.lblEntradaA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEntradaA.Location = new System.Drawing.Point(0, 0);
+            this.lblEntradaA.Name = "lblEntradaA";
+            this.lblEntradaA.Size = new System.Drawing.Size(54, 13);
+            this.lblEntradaA.TabIndex = 3;
+            this.lblEntradaA.Text = "Entrada A";
             // 
             // formSimulacao
             // 
@@ -622,20 +622,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.grfUniforme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.pnlBotoesSimulacao.ResumeLayout(false);
             this.pnlEntradaUsuario.ResumeLayout(false);
-            this.pnlA.ResumeLayout(false);
-            this.pnlA.PerformLayout();
-            this.pnlB.ResumeLayout(false);
-            this.pnlB.PerformLayout();
-            this.pnlC.ResumeLayout(false);
-            this.pnlC.PerformLayout();
-            this.pnlLambda.ResumeLayout(false);
-            this.pnlLambda.PerformLayout();
-            this.pnlMedia.ResumeLayout(false);
-            this.pnlMedia.PerformLayout();
             this.pnlDesvio.ResumeLayout(false);
             this.pnlDesvio.PerformLayout();
-            this.pnlBotoesSimulacao.ResumeLayout(false);
+            this.pnlMedia.ResumeLayout(false);
+            this.pnlMedia.PerformLayout();
+            this.pnlLambda.ResumeLayout(false);
+            this.pnlLambda.PerformLayout();
+            this.pnlC.ResumeLayout(false);
+            this.pnlC.PerformLayout();
+            this.pnlB.ResumeLayout(false);
+            this.pnlB.PerformLayout();
+            this.pnlA.ResumeLayout(false);
+            this.pnlA.PerformLayout();
             this.ResumeLayout(false);
 
         }

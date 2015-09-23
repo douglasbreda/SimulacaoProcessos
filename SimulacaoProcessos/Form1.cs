@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MathNet.Numerics.Distributions;
+
 
 namespace SimulacaoProcessos
 {
@@ -149,6 +151,8 @@ namespace SimulacaoProcessos
 
             this.ConfigurarAbaSimulacao();
         }
+
+
 
         #endregion Fim [Eventos]
     }

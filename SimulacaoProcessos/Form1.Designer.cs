@@ -86,6 +86,10 @@
             this.pnlA = new System.Windows.Forms.Panel();
             this.txtEntradaA = new System.Windows.Forms.TextBox();
             this.lblEntradaA = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.grpEstatisticas = new System.Windows.Forms.GroupBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tbcPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pnlConfig.SuspendLayout();
@@ -104,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grfUniforme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.pnlSimulacao.SuspendLayout();
             this.pnlBotoesSimulacao.SuspendLayout();
             this.pnlEntradaUsuario.SuspendLayout();
             this.pnlDesvio.SuspendLayout();
@@ -112,12 +117,14 @@
             this.pnlC.SuspendLayout();
             this.pnlB.SuspendLayout();
             this.pnlA.SuspendLayout();
+            this.grpEstatisticas.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcPrincipal
             // 
             this.tbcPrincipal.Controls.Add(this.tabPage1);
             this.tbcPrincipal.Controls.Add(this.tabPage2);
+            this.tbcPrincipal.Controls.Add(this.tabPage3);
             this.tbcPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tbcPrincipal.Name = "tbcPrincipal";
@@ -371,6 +378,8 @@
             // pnlSimulacao
             // 
             this.pnlSimulacao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlSimulacao.Controls.Add(this.grpEstatisticas);
+            this.pnlSimulacao.Controls.Add(this.flowLayoutPanel1);
             this.pnlSimulacao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSimulacao.Location = new System.Drawing.Point(3, 85);
             this.pnlSimulacao.Name = "pnlSimulacao";
@@ -591,6 +600,42 @@
             this.lblEntradaA.TabIndex = 3;
             this.lblEntradaA.Text = "Entrada A";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(610, 144);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // grpEstatisticas
+            // 
+            this.grpEstatisticas.Controls.Add(this.progressBar1);
+            this.grpEstatisticas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.grpEstatisticas.Location = new System.Drawing.Point(0, 144);
+            this.grpEstatisticas.Name = "grpEstatisticas";
+            this.grpEstatisticas.Size = new System.Drawing.Size(112, 183);
+            this.grpEstatisticas.TabIndex = 2;
+            this.grpEstatisticas.TabStop = false;
+            this.grpEstatisticas.Text = "Estatísticas";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(34, 53);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(30, 124);
+            this.progressBar1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(620, 419);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Tabela";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // formSimulacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,6 +667,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grfUniforme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.pnlSimulacao.ResumeLayout(false);
             this.pnlBotoesSimulacao.ResumeLayout(false);
             this.pnlEntradaUsuario.ResumeLayout(false);
             this.pnlDesvio.ResumeLayout(false);
@@ -636,6 +682,7 @@
             this.pnlB.PerformLayout();
             this.pnlA.ResumeLayout(false);
             this.pnlA.PerformLayout();
+            this.grpEstatisticas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -687,6 +734,10 @@
         private System.Windows.Forms.Panel pnlBotoesSimulacao;
         private System.Windows.Forms.Button btnParar;
         private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.GroupBox grpEstatisticas;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 

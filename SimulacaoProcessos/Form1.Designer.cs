@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tbcPrincipal = new System.Windows.Forms.TabControl();
             this.tbpInicial = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.bsoNormal = new System.Windows.Forms.BindingSource(this.components);
-            this.bsoUniforme = new System.Windows.Forms.BindingSource(this.components);
-            this.bsoTriangular = new System.Windows.Forms.BindingSource(this.components);
-            this.bsoExponencial = new System.Windows.Forms.BindingSource(this.components);
             this.pnlConfig = new System.Windows.Forms.Panel();
             this.pnlOpcoes = new System.Windows.Forms.Panel();
             this.pnlRight1 = new System.Windows.Forms.Panel();
             this.grfNormal = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bsoNormal = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft1 = new System.Windows.Forms.Panel();
             this.grfUniforme = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bsoUniforme = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRight2 = new System.Windows.Forms.Panel();
             this.grfTriangular = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bsoTriangular = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft2 = new System.Windows.Forms.Panel();
             this.grfExponencial = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bsoExponencial = new System.Windows.Forms.BindingSource(this.components);
             this.pnlConfiguracoes = new System.Windows.Forms.Panel();
             this.grpTec = new System.Windows.Forms.GroupBox();
             this.radTriangularTec = new System.Windows.Forms.RadioButton();
@@ -163,21 +163,21 @@
             this.tbcPrincipal.SuspendLayout();
             this.tbpInicial.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).BeginInit();
             this.pnlConfig.SuspendLayout();
             this.pnlOpcoes.SuspendLayout();
             this.pnlRight1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grfNormal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).BeginInit();
             this.pnlLeft1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grfUniforme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlRight2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grfTriangular)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).BeginInit();
             this.pnlLeft2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grfExponencial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).BeginInit();
             this.pnlConfiguracoes.SuspendLayout();
             this.grpTec.SuspendLayout();
             this.grpTs.SuspendLayout();
@@ -281,24 +281,24 @@
             // 
             // grfNormal
             // 
-            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.grfNormal.ChartAreas.Add(chartArea5);
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.grfNormal.ChartAreas.Add(chartArea1);
             this.grfNormal.DataSource = this.bsoNormal;
             this.grfNormal.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.grfNormal.Legends.Add(legend5);
+            legend1.Name = "Legend1";
+            this.grfNormal.Legends.Add(legend1);
             this.grfNormal.Location = new System.Drawing.Point(0, 0);
             this.grfNormal.Name = "grfNormal";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "Normal";
-            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series5.XValueMember = "X";
-            series5.YValueMembers = "Y";
-            this.grfNormal.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Normal";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.XValueMember = "X";
+            series1.YValueMembers = "Y";
+            this.grfNormal.Series.Add(series1);
             this.grfNormal.Size = new System.Drawing.Size(325, 193);
             this.grfNormal.TabIndex = 1;
             this.grfNormal.Text = "chart1";
@@ -314,24 +314,24 @@
             // 
             // grfUniforme
             // 
-            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea6.Name = "ChartArea1";
-            this.grfUniforme.ChartAreas.Add(chartArea6);
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.grfUniforme.ChartAreas.Add(chartArea2);
             this.grfUniforme.DataSource = this.bsoUniforme;
             this.grfUniforme.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Name = "Legend1";
-            this.grfUniforme.Legends.Add(legend6);
+            legend2.Name = "Legend1";
+            this.grfUniforme.Legends.Add(legend2);
             this.grfUniforme.Location = new System.Drawing.Point(0, 0);
             this.grfUniforme.Name = "grfUniforme";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.Name = "Uniforme";
-            series6.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series6.XValueMember = "X";
-            series6.YValueMembers = "Y";
-            this.grfUniforme.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Uniforme";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            series2.XValueMember = "X";
+            series2.YValueMembers = "Y";
+            this.grfUniforme.Series.Add(series2);
             this.grfUniforme.Size = new System.Drawing.Size(317, 193);
             this.grfUniforme.TabIndex = 2;
             this.grfUniforme.Text = "chart1";
@@ -357,24 +357,24 @@
             // 
             // grfTriangular
             // 
-            chartArea7.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea7.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea7.Name = "ChartArea1";
-            this.grfTriangular.ChartAreas.Add(chartArea7);
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea1";
+            this.grfTriangular.ChartAreas.Add(chartArea3);
             this.grfTriangular.DataSource = this.bsoTriangular;
             this.grfTriangular.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend7.Name = "Legend1";
-            this.grfTriangular.Legends.Add(legend7);
+            legend3.Name = "Legend1";
+            this.grfTriangular.Legends.Add(legend3);
             this.grfTriangular.Location = new System.Drawing.Point(0, 0);
             this.grfTriangular.Name = "grfTriangular";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "Triangular";
-            series7.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series7.XValueMember = "X";
-            series7.YValueMembers = "Y";
-            this.grfTriangular.Series.Add(series7);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Triangular";
+            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series3.XValueMember = "X";
+            series3.YValueMembers = "Y";
+            this.grfTriangular.Series.Add(series3);
             this.grfTriangular.Size = new System.Drawing.Size(325, 187);
             this.grfTriangular.TabIndex = 3;
             this.grfTriangular.Text = "chart1";
@@ -390,24 +390,24 @@
             // 
             // grfExponencial
             // 
-            chartArea8.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea8.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea8.Name = "ChartArea1";
-            this.grfExponencial.ChartAreas.Add(chartArea8);
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea4.Name = "ChartArea1";
+            this.grfExponencial.ChartAreas.Add(chartArea4);
             this.grfExponencial.DataSource = this.bsoExponencial;
             this.grfExponencial.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend8.Name = "Legend1";
-            this.grfExponencial.Legends.Add(legend8);
+            legend4.Name = "Legend1";
+            this.grfExponencial.Legends.Add(legend4);
             this.grfExponencial.Location = new System.Drawing.Point(0, 0);
             this.grfExponencial.Name = "grfExponencial";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Legend = "Legend1";
-            series8.Name = "Exponencial";
-            series8.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series8.XValueMember = "X";
-            series8.YValueMembers = "Y";
-            this.grfExponencial.Series.Add(series8);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Legend = "Legend1";
+            series4.Name = "Exponencial";
+            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            series4.XValueMember = "X";
+            series4.YValueMembers = "Y";
+            this.grfExponencial.Series.Add(series4);
             this.grfExponencial.Size = new System.Drawing.Size(317, 187);
             this.grfExponencial.TabIndex = 4;
             this.grfExponencial.Text = "chart1";
@@ -863,7 +863,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 3);
+            this.label8.Location = new System.Drawing.Point(0, 5);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 0;
@@ -871,7 +871,7 @@
             // 
             // txtTempoSimulacao
             // 
-            this.txtTempoSimulacao.Location = new System.Drawing.Point(6, 19);
+            this.txtTempoSimulacao.Location = new System.Drawing.Point(3, 22);
             this.txtTempoSimulacao.Name = "txtTempoSimulacao";
             this.txtTempoSimulacao.Size = new System.Drawing.Size(100, 20);
             this.txtTempoSimulacao.TabIndex = 1;
@@ -1434,21 +1434,21 @@
             this.tbcPrincipal.ResumeLayout(false);
             this.tbpInicial.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).EndInit();
             this.pnlConfig.ResumeLayout(false);
             this.pnlOpcoes.ResumeLayout(false);
             this.pnlRight1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grfNormal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).EndInit();
             this.pnlLeft1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grfUniforme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnlRight2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grfTriangular)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).EndInit();
             this.pnlLeft2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grfExponencial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).EndInit();
             this.pnlConfiguracoes.ResumeLayout(false);
             this.grpTec.ResumeLayout(false);
             this.grpTec.PerformLayout();

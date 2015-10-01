@@ -102,7 +102,7 @@ namespace SimulacaoProcessos
             }
             numero = rand.Next(1, (int)total + 1);
 
-            for (int i = 0; i < probabilidades.Count; i++)
+            for (int i = 0; i < probabilidades.Count - 1; i++)
             {
                 if (numero < probAcum)
                     return probabilidades[i].Numero;

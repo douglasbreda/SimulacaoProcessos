@@ -337,6 +337,13 @@ namespace SimulacaoProcessos
                     sbMensagem.AppendLine("- Deve ser informado um valor de entrada para C");
                     bRetorno = false;
                 }
+
+                if(Convert.ToDouble(txtEntradaC.Text) > Convert.ToDouble(txtEntradaB.Text) || Convert.ToDouble(txtEntradaC.Text) < Convert.ToDouble(txtEntradaA.Text))
+                {
+                    sbMensagem.AppendLine("- O valor de C deve ser menor que o valor de B e maior que o valor de A");
+                    bRetorno = false;
+                }
+
             }
             if (radTriangularTs.Checked) {
 
@@ -354,6 +361,12 @@ namespace SimulacaoProcessos
                 if (txtTempoC.Text == "")
                 {
                     sbMensagem.AppendLine("- Deve ser informado um valor de processamento para C");
+                    bRetorno = false;
+                }
+
+                if (Convert.ToDouble(txtEntradaC.Text) > Convert.ToDouble(txtEntradaB.Text) || Convert.ToDouble(txtEntradaC.Text) < Convert.ToDouble(txtEntradaA.Text))
+                {
+                    sbMensagem.AppendLine("- O valor de C deve ser menor que o valor de B e maior que o valor de A");
                     bRetorno = false;
                 }
             }
@@ -597,7 +610,7 @@ namespace SimulacaoProcessos
 
         private void BloquearCaracteres(KeyPressEventArgs pEvento)
         {
-            if (!char.IsDigit(pEvento.KeyChar) && !(pEvento.KeyChar == (char)Keys.Enter) && !(pEvento.KeyChar == (char)Keys.Back))
+            if (!char.IsDigit(pEvento.KeyChar) && !(pEvento.KeyChar == (char)Keys.Enter) && !(pEvento.KeyChar == (char)Keys.Back) && pEvento.KeyChar != (char)8 && pEvento.KeyChar != (char)44)
             {
                 pEvento.Handled = true;
             }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MathNet.Numerics.Distributions;
 using System.Threading;
+using System.IO;
 
 namespace SimulacaoProcessos
 {
@@ -255,8 +256,9 @@ namespace SimulacaoProcessos
                         this.ExecutarProcesso(Convert.ToInt32(drwLinha["TS"]));
                     }
                 }
-
             }
+
+            this.GerarRelatorio();
         }
 
         private void ExecutarProcesso(int pTempo)
@@ -299,138 +301,6 @@ namespace SimulacaoProcessos
             lblTotalProcessosV.Text = dtsTabela.TABELA.Rows.Count.ToString();
             lblProcessosFilaV.Text = iNumProcessosEmFila.ToString();
             lblProcessosExecutadosV.Text = idExecutados.ToString();
-        }
-
-        private void MontarTabela()
-        {
-            DataRow drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 0;
-            drwNovaLinha["TEC"] = 0;
-            drwNovaLinha["TC_I"] = 0;
-            drwNovaLinha["TS_I"] = 0;
-            drwNovaLinha["TS"] = 5;
-            drwNovaLinha["TS_FIM"] = 5;
-            drwNovaLinha["FILA"] = 0;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 1;
-            drwNovaLinha["TEC"] = 0;
-            drwNovaLinha["TC_I"] = 7;
-            drwNovaLinha["TS_I"] = 7;
-            drwNovaLinha["TS"] = 1;
-            drwNovaLinha["TS_FIM"] = 8;
-            drwNovaLinha["FILA"] = 0;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 2;
-            drwNovaLinha["TEC"] = 7;
-            drwNovaLinha["TC_I"] = 14;
-            drwNovaLinha["TS_I"] = 14;
-            drwNovaLinha["TS"] = 3;
-            drwNovaLinha["TS_FIM"] = 17;
-            drwNovaLinha["FILA"] = 0;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 3;
-            drwNovaLinha["TEC"] = 6;
-            drwNovaLinha["TC_I"] = 20;
-            drwNovaLinha["TS_I"] = 20;
-            drwNovaLinha["TS"] = 6;
-            drwNovaLinha["TS_FIM"] = 26;
-            drwNovaLinha["FILA"] = 0;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 4;
-            drwNovaLinha["TEC"] = 3;
-            drwNovaLinha["TC_I"] = 23;
-            drwNovaLinha["TS_I"] = 26;
-            drwNovaLinha["TS"] = 10;
-            drwNovaLinha["TS_FIM"] = 36;
-            drwNovaLinha["FILA"] = 3;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 5;
-            drwNovaLinha["TEC"] = 9;
-            drwNovaLinha["TC_I"] = 32;
-            drwNovaLinha["TS_I"] = 36;
-            drwNovaLinha["TS"] = 11;
-            drwNovaLinha["TS_FIM"] = 47;
-            drwNovaLinha["FILA"] = 4;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 6;
-            drwNovaLinha["TEC"] = 7;
-            drwNovaLinha["TC_I"] = 39;
-            drwNovaLinha["TS_I"] = 67;
-            drwNovaLinha["TS"] = 20;
-            drwNovaLinha["TS_FIM"] = 0;
-            drwNovaLinha["FILA"] = 8;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 7;
-            drwNovaLinha["TEC"] = 5;
-            drwNovaLinha["TC_I"] = 44;
-            drwNovaLinha["TS_I"] = 67;
-            drwNovaLinha["TS"] = 15;
-            drwNovaLinha["TS_FIM"] = 82;
-            drwNovaLinha["FILA"] = 23;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 8;
-            drwNovaLinha["TEC"] = 17;
-            drwNovaLinha["TC_I"] = 61;
-            drwNovaLinha["TS_I"] = 82;
-            drwNovaLinha["TS"] = 7;
-            drwNovaLinha["TS_FIM"] = 89;
-            drwNovaLinha["FILA"] = 21;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 9;
-            drwNovaLinha["TEC"] = 11;
-            drwNovaLinha["TC_I"] = 72;
-            drwNovaLinha["TS_I"] = 89;
-            drwNovaLinha["TS"] = 2;
-            drwNovaLinha["TS_FIM"] = 91;
-            drwNovaLinha["FILA"] = 17;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            drwNovaLinha = dtsTabela.TABELA.NewRow();
-            drwNovaLinha["ID"] = 10;
-            drwNovaLinha["TEC"] = 8;
-            drwNovaLinha["TC_I"] = 80;
-            drwNovaLinha["TS_I"] = 91;
-            drwNovaLinha["TS"] = 4;
-            drwNovaLinha["TS_FIM"] = 95;
-            drwNovaLinha["FILA"] = 11;
-            dtsTabela.TABELA.Rows.Add(drwNovaLinha);
-            bsoTabela.EndEdit();
-        }
-
-        private void ConfigurarTela()
-        {
-            //if (radNormal.Checked)
-            //{
-            //    radExponencial.Checked = false;
-            //    radTriangular.Checked = false;
-            //    radUniforme.Checked = false;
-            //}
-            //else if (radUniforme.Checked)
-            //{
-            //    radNormal.Checked = false;
-            //    radTriangular.Checked = false;
-            //    radExponencial.Checked = false;
-            //}
-            //else if (radTriangular.Checked)
-            //{
-            //    radNormal.Checked = false;
-            //    radUniforme.Checked = false;
-            //    radExponencial.Checked = false;
-            //}
-            //else if (radExponencial.Checked)
-            //{
-            //    radNormal.Checked = false;
-            //    radTriangular.Checked = false;
-            //    radUniforme.Checked = false;
-            //}
         }
 
         private bool ValidarSimulacao()
@@ -720,7 +590,7 @@ namespace SimulacaoProcessos
             ts_i = Convert.ToInt32(drwNovaLinha["TS_I"]);
             ts_fim = Convert.ToInt32(drwNovaLinha["TS_FIM"]);
             id++;
-            drwNovaLinha["FILA"] = Convert.ToInt32(drwNovaLinha["TS_FIM"]) - Convert.ToInt32(drwNovaLinha["TC_I"]);
+            drwNovaLinha["FILA"] = Convert.ToInt32(drwNovaLinha["TC_I"]) - Convert.ToInt32(drwNovaLinha["TEC"]);
 
             dtsTabela.TABELA.Rows.Add(drwNovaLinha);
         }
@@ -781,6 +651,25 @@ namespace SimulacaoProcessos
             return sRetorno;
         }
 
+        private string BuscarFormatoTempoRelatorio()
+        {
+            string sRetorno = "";
+            if ((Enumerados.eTempo)cboTempoRelatorio.SelectedIndex == Enumerados.eTempo.segundos)
+                sRetorno = "s";
+            else if ((Enumerados.eTempo)cboTempoRelatorio.SelectedIndex == Enumerados.eTempo.nanosegundo)
+                sRetorno = "ns";
+            else if ((Enumerados.eTempo)cboTempoRelatorio.SelectedIndex == Enumerados.eTempo.dia)
+                sRetorno = "dia(s)";
+            else if ((Enumerados.eTempo)cboTempoRelatorio.SelectedIndex == Enumerados.eTempo.horas)
+                sRetorno = "h";
+            else if ((Enumerados.eTempo)cboTempoRelatorio.SelectedIndex == Enumerados.eTempo.milisiegundos)
+                sRetorno = "ms";
+            else if ((Enumerados.eTempo)cboTempoRelatorio.SelectedIndex == Enumerados.eTempo.minutos)
+                sRetorno = "min";
+
+            return sRetorno;
+        }
+
         private void ResetarValores()
         {
             bContinuarSimulacao = true;
@@ -788,6 +677,7 @@ namespace SimulacaoProcessos
             id = 0;
             ts_fim = 0;
             ts_i = 0;
+            tc_i = 0;
             iNumProcessosEmFila = 0;
             idExecutados = 0;
             barraProgresso.Value = 0;
@@ -823,6 +713,104 @@ namespace SimulacaoProcessos
             }
         }
 
+        private void GerarRelatorio()
+        {
+            string caminho = @"C:\Users\" + Environment.UserName + @"\Desktop\LogSimulacao" + DateTime.Now.ToString().Replace("/", "-").Replace(":", ".") + ".txt";
+            StreamWriter arquivo = new StreamWriter(caminho);
+            arquivo.WriteLine(BuscarMaiorMenorProcessamento());
+            arquivo.WriteLine(BuscarMaiorMenorTempoFila());
+            arquivo.WriteLine(BuscarMaiorMenorTotal());
+            arquivo.Close();
+            MessageBox.Show("Arquivo Gravado em " + caminho + " com sucesso");
+        }
+
+        private string BuscarMaiorMenorProcessamento()
+        {
+            double nMaiorValor = 0;
+            int idMaiorValor = 0;
+            double nMenorValor = dtsTabela.TABELA.Max(item => item.TS);
+            int idMenorValor = 0;
+            StringBuilder sbMensagem = new StringBuilder();
+
+            dtsTabela.TABELA.AsEnumerable().ToList().ForEach(item =>
+            {
+                if (item.TS > nMaiorValor)
+                {
+                    nMaiorValor = item.TS;
+                    idMaiorValor = item.ID;
+                }
+                if(item.TS < nMenorValor)
+                {
+                    nMenorValor = item.TS;
+                    idMenorValor = item.ID;
+                }
+
+            });
+
+            sbMensagem.AppendLine("Entidade com maior processamento: " + "ID: " + idMaiorValor + " Tempo: " + nMaiorValor + BuscarFormatoTempoRelatorio());
+            sbMensagem.AppendLine("Entidade com menor processamento: " + "ID: " + idMenorValor + " Tempo: " + nMenorValor + BuscarFormatoTempoRelatorio());
+
+            return sbMensagem.ToString();
+        }
+
+        private string BuscarMaiorMenorTempoFila()
+        {
+            double nMaiorValor = 0;
+            int idMaiorValor = 0;
+            double nMenorValor = dtsTabela.TABELA.Min(item => item.TS);
+            int idMenorValor = 0;
+            StringBuilder sbMensagem = new StringBuilder();
+
+            dtsTabela.TABELA.AsEnumerable().ToList().ForEach(item =>
+            {
+                if (item.FILA > nMaiorValor)
+                {
+                    nMaiorValor = item.TS;
+                    idMaiorValor = item.ID;
+                }
+                if (item.FILA < nMenorValor)
+                {
+                    nMenorValor = item.TS;
+                    idMenorValor = item.ID;
+                }
+
+            });
+
+            sbMensagem.AppendLine("Entidade com maior tempo de fila: " + "ID: " + idMaiorValor + " Tempo: " + nMaiorValor + BuscarFormatoTempoRelatorio());
+            sbMensagem.AppendLine("Entidade com menor tempo de fila: " + "ID: " + idMenorValor + " Tempo: " + nMenorValor + BuscarFormatoTempoRelatorio());
+
+            return sbMensagem.ToString();
+        }
+
+        private string BuscarMaiorMenorTotal()
+        {
+            double nMaiorValor = 0;
+            int idMaiorValor = 0;
+            double nMenorValor = dtsTabela.TABELA.Max(item => item.TS);
+            int idMenorValor = 0;
+            StringBuilder sbMensagem = new StringBuilder();
+
+            dtsTabela.TABELA.AsEnumerable().ToList().ForEach(item =>
+            {
+                if ((item.TS + item.FILA) > nMaiorValor)
+                {
+                    nMaiorValor = item.TS;
+                    idMaiorValor = item.ID;
+                }
+                if ((item.TS - item.FILA) < nMenorValor)
+                {
+                    nMenorValor = item.TS;
+                    idMenorValor = item.ID;
+                }
+
+            });
+
+            sbMensagem.AppendLine("Entidade com maior tempo total: " + idMaiorValor + " Tempo: " + nMaiorValor + BuscarFormatoTempoRelatorio());
+            sbMensagem.AppendLine("Entidade com menor tempo total: " + idMenorValor + " Tempo: " + nMenorValor + BuscarFormatoTempoRelatorio());
+
+            return sbMensagem.ToString();
+        }
+
         #endregion Fim [Métodos]
 
         #region [Eventos]
@@ -850,13 +838,14 @@ namespace SimulacaoProcessos
             DefinirDirecao();
             double nValorTec = 0;
             double nValorTs = 0;
+            distribuicao = new CalcularDistribuicao();
+            Random tempoRandom = new Random();
 
             if (ValidarSimulacao())
             {
                 while (bContinuarSimulacao)
                 {
-                    distribuicao = new CalcularDistribuicao();
-
+                    Thread.Sleep(tempoRandom.Next(10, iTempoSimulacao));
                     if (radUniformeTec.Checked)
                         nValorTec = CalcularDistribuicaoUniforme(true);
 
@@ -998,6 +987,12 @@ namespace SimulacaoProcessos
                 ConfigurarTec();
         }
 
+        private void radTriangularTec_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radTriangularTec.Checked)
+                ConfigurarTec();
+        }
+
         private void radTriangularTec_CheckedChanged(object sender, EventArgs e)
         {
             if (radTriangularTec.Checked)
@@ -1031,8 +1026,9 @@ namespace SimulacaoProcessos
         {
             DefinirCorSimulacao();
         }
+
         #endregion Fim [Eventos]
 
-
+      
     }
 }

@@ -44,6 +44,10 @@
             this.tbcPrincipal = new System.Windows.Forms.TabControl();
             this.tbpInicial = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.bsoNormal = new System.Windows.Forms.BindingSource(this.components);
+            this.bsoUniforme = new System.Windows.Forms.BindingSource(this.components);
+            this.bsoTriangular = new System.Windows.Forms.BindingSource(this.components);
+            this.bsoExponencial = new System.Windows.Forms.BindingSource(this.components);
             this.pnlConfig = new System.Windows.Forms.Panel();
             this.pnlOpcoes = new System.Windows.Forms.Panel();
             this.pnlRight1 = new System.Windows.Forms.Panel();
@@ -69,6 +73,10 @@
             this.tbpSimulacao = new System.Windows.Forms.TabPage();
             this.pnlSimulacao = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblTipoTempo = new System.Windows.Forms.Label();
+            this.lblTempo = new System.Windows.Forms.Label();
             this.lblProcessosExecutadosV = new System.Windows.Forms.Label();
             this.lblProcessosExecutados = new System.Windows.Forms.Label();
             this.lblProcessosFilaV = new System.Windows.Forms.Label();
@@ -84,6 +92,13 @@
             this.pnlObjetoExecutando = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
             this.pnlBotoesSimulacao = new System.Windows.Forms.Panel();
+            this.cboTempoRelatorio = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblDirecao = new System.Windows.Forms.Label();
+            this.cboDirecaoSimulacao = new System.Windows.Forms.ComboBox();
+            this.pnlCorAtual = new System.Windows.Forms.Panel();
+            this.btnEscolherCor = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTempoSimulacao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,6 +107,9 @@
             this.pnlEntradaUsuario = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pnlTempoC = new System.Windows.Forms.Panel();
+            this.txtTempoC = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlTempoB = new System.Windows.Forms.Panel();
             this.txtTempoB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -109,6 +127,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.grpEntrada = new System.Windows.Forms.GroupBox();
+            this.pnlC = new System.Windows.Forms.Panel();
+            this.txtEntradaC = new System.Windows.Forms.TextBox();
+            this.lblEntradaC = new System.Windows.Forms.Label();
             this.pnlB = new System.Windows.Forms.Panel();
             this.txtEntradaB = new System.Windows.Forms.TextBox();
             this.lblEntradaB = new System.Windows.Forms.Label();
@@ -135,30 +156,17 @@
             this.fILADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsoTabela = new System.Windows.Forms.BindingSource(this.components);
             this.dtsTabela = new SimulacaoProcessos.dtsTabela();
-            this.pnlTempoC = new System.Windows.Forms.Panel();
-            this.txtTempoC = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pnlC = new System.Windows.Forms.Panel();
-            this.txtEntradaC = new System.Windows.Forms.TextBox();
-            this.lblEntradaC = new System.Windows.Forms.Label();
-            this.lblTempo = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblTipoTempo = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.bsoNormal = new System.Windows.Forms.BindingSource(this.components);
-            this.bsoUniforme = new System.Windows.Forms.BindingSource(this.components);
-            this.bsoTriangular = new System.Windows.Forms.BindingSource(this.components);
-            this.bsoExponencial = new System.Windows.Forms.BindingSource(this.components);
-            this.btnEscolherCor = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pnlCorAtual = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.cboDirecaoSimulacao = new System.Windows.Forms.ComboBox();
-            this.lblDirecao = new System.Windows.Forms.Label();
+            this.dtsTabelaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tABELABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbcPrincipal.SuspendLayout();
             this.tbpInicial.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).BeginInit();
             this.pnlConfig.SuspendLayout();
             this.pnlOpcoes.SuspendLayout();
             this.pnlRight1.SuspendLayout();
@@ -176,15 +184,18 @@
             this.tbpSimulacao.SuspendLayout();
             this.pnlSimulacao.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.grpFila.SuspendLayout();
             this.pnlProcessosExecucao.SuspendLayout();
             this.pnlObjetoExecutando.SuspendLayout();
             this.pnlBotoesSimulacao.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.pnlEntradaUsuario.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.pnlTempoC.SuspendLayout();
             this.pnlTempoB.SuspendLayout();
             this.pnlTempoDesvio.SuspendLayout();
             this.pnlTempoA.SuspendLayout();
@@ -192,6 +203,7 @@
             this.pnlTempoLambda.SuspendLayout();
             this.panel4.SuspendLayout();
             this.grpEntrada.SuspendLayout();
+            this.pnlC.SuspendLayout();
             this.pnlB.SuspendLayout();
             this.pnlDesvio.SuspendLayout();
             this.pnlA.SuspendLayout();
@@ -201,14 +213,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdTabela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsoTabela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsTabela)).BeginInit();
-            this.pnlTempoC.SuspendLayout();
-            this.pnlC.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).BeginInit();
-            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtsTabelaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tABELABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPrincipal
@@ -220,7 +226,7 @@
             this.tbcPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tbcPrincipal.Name = "tbcPrincipal";
             this.tbcPrincipal.SelectedIndex = 0;
-            this.tbcPrincipal.Size = new System.Drawing.Size(921, 722);
+            this.tbcPrincipal.Size = new System.Drawing.Size(1051, 646);
             this.tbcPrincipal.TabIndex = 0;
             // 
             // tbpInicial
@@ -230,7 +236,7 @@
             this.tbpInicial.Location = new System.Drawing.Point(4, 22);
             this.tbpInicial.Name = "tbpInicial";
             this.tbpInicial.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpInicial.Size = new System.Drawing.Size(913, 696);
+            this.tbpInicial.Size = new System.Drawing.Size(1043, 620);
             this.tbpInicial.TabIndex = 3;
             this.tbpInicial.Text = "Configurações";
             this.tbpInicial.UseVisualStyleBackColor = true;
@@ -239,18 +245,19 @@
             // 
             this.panel6.Controls.Add(this.pnlConfig);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 85);
+            this.panel6.Location = new System.Drawing.Point(3, 89);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(907, 608);
+            this.panel6.Size = new System.Drawing.Size(1037, 528);
             this.panel6.TabIndex = 3;
             // 
             // pnlConfig
             // 
             this.pnlConfig.Controls.Add(this.pnlOpcoes);
             this.pnlConfig.Controls.Add(this.panel1);
-            this.pnlConfig.Location = new System.Drawing.Point(3, 3);
+            this.pnlConfig.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlConfig.Location = new System.Drawing.Point(0, 0);
             this.pnlConfig.Name = "pnlConfig";
-            this.pnlConfig.Size = new System.Drawing.Size(838, 445);
+            this.pnlConfig.Size = new System.Drawing.Size(687, 528);
             this.pnlConfig.TabIndex = 2;
             // 
             // pnlOpcoes
@@ -258,18 +265,18 @@
             this.pnlOpcoes.Controls.Add(this.pnlRight1);
             this.pnlOpcoes.Controls.Add(this.pnlLeft1);
             this.pnlOpcoes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlOpcoes.Location = new System.Drawing.Point(0, 220);
+            this.pnlOpcoes.Location = new System.Drawing.Point(0, 187);
             this.pnlOpcoes.Name = "pnlOpcoes";
-            this.pnlOpcoes.Size = new System.Drawing.Size(838, 193);
+            this.pnlOpcoes.Size = new System.Drawing.Size(687, 193);
             this.pnlOpcoes.TabIndex = 1;
             // 
             // pnlRight1
             // 
             this.pnlRight1.Controls.Add(this.grfNormal);
             this.pnlRight1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlRight1.Location = new System.Drawing.Point(296, 0);
+            this.pnlRight1.Location = new System.Drawing.Point(317, 0);
             this.pnlRight1.Name = "pnlRight1";
-            this.pnlRight1.Size = new System.Drawing.Size(318, 193);
+            this.pnlRight1.Size = new System.Drawing.Size(325, 193);
             this.pnlRight1.TabIndex = 4;
             // 
             // grfNormal
@@ -287,12 +294,12 @@
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series5.Legend = "Legend1";
-            series5.Name = "Uniforme";
+            series5.Name = "Normal";
             series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series5.XValueMember = "X";
             series5.YValueMembers = "Y";
             this.grfNormal.Series.Add(series5);
-            this.grfNormal.Size = new System.Drawing.Size(318, 193);
+            this.grfNormal.Size = new System.Drawing.Size(325, 193);
             this.grfNormal.TabIndex = 1;
             this.grfNormal.Text = "chart1";
             // 
@@ -302,7 +309,7 @@
             this.pnlLeft1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft1.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft1.Name = "pnlLeft1";
-            this.pnlLeft1.Size = new System.Drawing.Size(296, 193);
+            this.pnlLeft1.Size = new System.Drawing.Size(317, 193);
             this.pnlLeft1.TabIndex = 3;
             // 
             // grfUniforme
@@ -325,7 +332,7 @@
             series6.XValueMember = "X";
             series6.YValueMembers = "Y";
             this.grfUniforme.Series.Add(series6);
-            this.grfUniforme.Size = new System.Drawing.Size(296, 193);
+            this.grfUniforme.Size = new System.Drawing.Size(317, 193);
             this.grfUniforme.TabIndex = 2;
             this.grfUniforme.Text = "chart1";
             // 
@@ -336,16 +343,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(838, 220);
+            this.panel1.Size = new System.Drawing.Size(687, 187);
             this.panel1.TabIndex = 0;
             // 
             // pnlRight2
             // 
             this.pnlRight2.Controls.Add(this.grfTriangular);
             this.pnlRight2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlRight2.Location = new System.Drawing.Point(296, 0);
+            this.pnlRight2.Location = new System.Drawing.Point(317, 0);
             this.pnlRight2.Name = "pnlRight2";
-            this.pnlRight2.Size = new System.Drawing.Size(321, 220);
+            this.pnlRight2.Size = new System.Drawing.Size(325, 187);
             this.pnlRight2.TabIndex = 5;
             // 
             // grfTriangular
@@ -355,9 +362,10 @@
             chartArea7.Name = "ChartArea1";
             this.grfTriangular.ChartAreas.Add(chartArea7);
             this.grfTriangular.DataSource = this.bsoTriangular;
+            this.grfTriangular.Dock = System.Windows.Forms.DockStyle.Fill;
             legend7.Name = "Legend1";
             this.grfTriangular.Legends.Add(legend7);
-            this.grfTriangular.Location = new System.Drawing.Point(0, 17);
+            this.grfTriangular.Location = new System.Drawing.Point(0, 0);
             this.grfTriangular.Name = "grfTriangular";
             series7.ChartArea = "ChartArea1";
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -367,7 +375,7 @@
             series7.XValueMember = "X";
             series7.YValueMembers = "Y";
             this.grfTriangular.Series.Add(series7);
-            this.grfTriangular.Size = new System.Drawing.Size(321, 203);
+            this.grfTriangular.Size = new System.Drawing.Size(325, 187);
             this.grfTriangular.TabIndex = 3;
             this.grfTriangular.Text = "chart1";
             // 
@@ -377,7 +385,7 @@
             this.pnlLeft2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft2.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft2.Name = "pnlLeft2";
-            this.pnlLeft2.Size = new System.Drawing.Size(296, 220);
+            this.pnlLeft2.Size = new System.Drawing.Size(317, 187);
             this.pnlLeft2.TabIndex = 4;
             // 
             // grfExponencial
@@ -400,7 +408,7 @@
             series8.XValueMember = "X";
             series8.YValueMembers = "Y";
             this.grfExponencial.Series.Add(series8);
-            this.grfExponencial.Size = new System.Drawing.Size(296, 220);
+            this.grfExponencial.Size = new System.Drawing.Size(317, 187);
             this.grfExponencial.TabIndex = 4;
             this.grfExponencial.Text = "chart1";
             // 
@@ -411,7 +419,7 @@
             this.pnlConfiguracoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlConfiguracoes.Location = new System.Drawing.Point(3, 3);
             this.pnlConfiguracoes.Name = "pnlConfiguracoes";
-            this.pnlConfiguracoes.Size = new System.Drawing.Size(907, 82);
+            this.pnlConfiguracoes.Size = new System.Drawing.Size(1037, 86);
             this.pnlConfiguracoes.TabIndex = 2;
             // 
             // grpTec
@@ -437,7 +445,7 @@
             this.radTriangularTec.TabStop = true;
             this.radTriangularTec.Text = "Triangular";
             this.radTriangularTec.UseVisualStyleBackColor = true;
-            this.radTriangularTec.CheckedChanged += new System.EventHandler(this.radTriangularTec_CheckedChanged);
+            this.radTriangularTec.CheckedChanged += new System.EventHandler(this.radTriangularTec_CheckedChanged_1);
             // 
             // radExponencialTec
             // 
@@ -482,7 +490,7 @@
             this.grpTs.Controls.Add(this.radExponencialTs);
             this.grpTs.Controls.Add(this.radUniformeTs);
             this.grpTs.Controls.Add(this.radNormalTs);
-            this.grpTs.Location = new System.Drawing.Point(220, 3);
+            this.grpTs.Location = new System.Drawing.Point(220, 2);
             this.grpTs.Name = "grpTs";
             this.grpTs.Size = new System.Drawing.Size(209, 77);
             this.grpTs.TabIndex = 1;
@@ -546,7 +554,7 @@
             this.tbpSimulacao.Location = new System.Drawing.Point(4, 22);
             this.tbpSimulacao.Name = "tbpSimulacao";
             this.tbpSimulacao.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpSimulacao.Size = new System.Drawing.Size(913, 696);
+            this.tbpSimulacao.Size = new System.Drawing.Size(1043, 620);
             this.tbpSimulacao.TabIndex = 1;
             this.tbpSimulacao.Text = "Simulação";
             this.tbpSimulacao.UseVisualStyleBackColor = true;
@@ -557,9 +565,9 @@
             this.pnlSimulacao.Controls.Add(this.groupBox1);
             this.pnlSimulacao.Controls.Add(this.panel2);
             this.pnlSimulacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSimulacao.Location = new System.Drawing.Point(3, 157);
+            this.pnlSimulacao.Location = new System.Drawing.Point(3, 163);
             this.pnlSimulacao.Name = "pnlSimulacao";
-            this.pnlSimulacao.Size = new System.Drawing.Size(907, 536);
+            this.pnlSimulacao.Size = new System.Drawing.Size(1037, 454);
             this.pnlSimulacao.TabIndex = 3;
             // 
             // groupBox1
@@ -574,10 +582,50 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 362);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(903, 170);
+            this.groupBox1.Size = new System.Drawing.Size(1033, 88);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estatísticas";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.lblTipoTempo);
+            this.panel7.Controls.Add(this.lblTempo);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(854, 16);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(176, 69);
+            this.panel7.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Tempo de Simulação";
+            // 
+            // lblTipoTempo
+            // 
+            this.lblTipoTempo.AutoSize = true;
+            this.lblTipoTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoTempo.Location = new System.Drawing.Point(131, 51);
+            this.lblTipoTempo.Name = "lblTipoTempo";
+            this.lblTipoTempo.Size = new System.Drawing.Size(13, 20);
+            this.lblTipoTempo.TabIndex = 8;
+            this.lblTipoTempo.Text = ".";
+            // 
+            // lblTempo
+            // 
+            this.lblTempo.AutoSize = true;
+            this.lblTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempo.Location = new System.Drawing.Point(63, 32);
+            this.lblTempo.Name = "lblTempo";
+            this.lblTempo.Size = new System.Drawing.Size(28, 39);
+            this.lblTempo.TabIndex = 6;
+            this.lblTempo.Text = "-";
             // 
             // lblProcessosExecutadosV
             // 
@@ -639,7 +687,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(903, 362);
+            this.panel2.Size = new System.Drawing.Size(1033, 362);
             this.panel2.TabIndex = 0;
             // 
             // panel3
@@ -650,7 +698,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(903, 362);
+            this.panel3.Size = new System.Drawing.Size(1033, 362);
             this.panel3.TabIndex = 0;
             // 
             // grpFila
@@ -659,7 +707,7 @@
             this.grpFila.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grpFila.Location = new System.Drawing.Point(0, 324);
             this.grpFila.Name = "grpFila";
-            this.grpFila.Size = new System.Drawing.Size(903, 38);
+            this.grpFila.Size = new System.Drawing.Size(1033, 38);
             this.grpFila.TabIndex = 5;
             this.grpFila.TabStop = false;
             this.grpFila.Text = "Fila";
@@ -672,7 +720,7 @@
             this.barraProgresso.Location = new System.Drawing.Point(3, 16);
             this.barraProgresso.Maximum = 1000;
             this.barraProgresso.Name = "barraProgresso";
-            this.barraProgresso.Size = new System.Drawing.Size(897, 19);
+            this.barraProgresso.Size = new System.Drawing.Size(1027, 19);
             this.barraProgresso.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barraProgresso.TabIndex = 0;
             // 
@@ -683,7 +731,7 @@
             this.pnlExecutando.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.pnlExecutando.Location = new System.Drawing.Point(0, 57);
             this.pnlExecutando.Name = "pnlExecutando";
-            this.pnlExecutando.Size = new System.Drawing.Size(903, 261);
+            this.pnlExecutando.Size = new System.Drawing.Size(1033, 261);
             this.pnlExecutando.TabIndex = 1;
             // 
             // pnlProcessosExecucao
@@ -692,7 +740,7 @@
             this.pnlProcessosExecucao.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProcessosExecucao.Location = new System.Drawing.Point(0, 0);
             this.pnlProcessosExecucao.Name = "pnlProcessosExecucao";
-            this.pnlProcessosExecucao.Size = new System.Drawing.Size(903, 57);
+            this.pnlProcessosExecucao.Size = new System.Drawing.Size(1033, 57);
             this.pnlProcessosExecucao.TabIndex = 0;
             // 
             // pnlObjetoExecutando
@@ -718,6 +766,8 @@
             // 
             // pnlBotoesSimulacao
             // 
+            this.pnlBotoesSimulacao.Controls.Add(this.cboTempoRelatorio);
+            this.pnlBotoesSimulacao.Controls.Add(this.label9);
             this.pnlBotoesSimulacao.Controls.Add(this.panel8);
             this.pnlBotoesSimulacao.Controls.Add(this.label8);
             this.pnlBotoesSimulacao.Controls.Add(this.txtTempoSimulacao);
@@ -727,8 +777,88 @@
             this.pnlBotoesSimulacao.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBotoesSimulacao.Location = new System.Drawing.Point(3, 117);
             this.pnlBotoesSimulacao.Name = "pnlBotoesSimulacao";
-            this.pnlBotoesSimulacao.Size = new System.Drawing.Size(907, 40);
+            this.pnlBotoesSimulacao.Size = new System.Drawing.Size(1037, 46);
             this.pnlBotoesSimulacao.TabIndex = 2;
+            // 
+            // cboTempoRelatorio
+            // 
+            this.cboTempoRelatorio.FormattingEnabled = true;
+            this.cboTempoRelatorio.Items.AddRange(new object[] {
+            "Nanosegundos",
+            "Milisegundos",
+            "Segundos",
+            "Minutos",
+            "Horas",
+            "Dias"});
+            this.cboTempoRelatorio.Location = new System.Drawing.Point(270, 19);
+            this.cboTempoRelatorio.Name = "cboTempoRelatorio";
+            this.cboTempoRelatorio.Size = new System.Drawing.Size(153, 21);
+            this.cboTempoRelatorio.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(270, 3);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Unidade de tempo Relatório";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.lblDirecao);
+            this.panel8.Controls.Add(this.cboDirecaoSimulacao);
+            this.panel8.Controls.Add(this.pnlCorAtual);
+            this.panel8.Controls.Add(this.btnEscolherCor);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(786, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(251, 46);
+            this.panel8.TabIndex = 7;
+            // 
+            // lblDirecao
+            // 
+            this.lblDirecao.AutoSize = true;
+            this.lblDirecao.Location = new System.Drawing.Point(99, 0);
+            this.lblDirecao.Name = "lblDirecao";
+            this.lblDirecao.Size = new System.Drawing.Size(109, 13);
+            this.lblDirecao.TabIndex = 8;
+            this.lblDirecao.Text = "Direção da simulação";
+            // 
+            // cboDirecaoSimulacao
+            // 
+            this.cboDirecaoSimulacao.FormattingEnabled = true;
+            this.cboDirecaoSimulacao.Items.AddRange(new object[] {
+            "TopDown",
+            "LeftToRight",
+            "RightToLeft",
+            "BottomUp"});
+            this.cboDirecaoSimulacao.Location = new System.Drawing.Point(102, 16);
+            this.cboDirecaoSimulacao.Name = "cboDirecaoSimulacao";
+            this.cboDirecaoSimulacao.Size = new System.Drawing.Size(144, 21);
+            this.cboDirecaoSimulacao.TabIndex = 7;
+            // 
+            // pnlCorAtual
+            // 
+            this.pnlCorAtual.BackColor = System.Drawing.Color.GreenYellow;
+            this.pnlCorAtual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCorAtual.Location = new System.Drawing.Point(46, 6);
+            this.pnlCorAtual.Name = "pnlCorAtual";
+            this.pnlCorAtual.Size = new System.Drawing.Size(43, 30);
+            this.pnlCorAtual.TabIndex = 6;
+            // 
+            // btnEscolherCor
+            // 
+            this.btnEscolherCor.FlatAppearance.BorderSize = 0;
+            this.btnEscolherCor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscolherCor.Image = global::SimulacaoProcessos.Properties.Resources._125_16x16;
+            this.btnEscolherCor.Location = new System.Drawing.Point(3, 5);
+            this.btnEscolherCor.Name = "btnEscolherCor";
+            this.btnEscolherCor.Size = new System.Drawing.Size(37, 32);
+            this.btnEscolherCor.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnEscolherCor, "Trocar a cor da simulação");
+            this.btnEscolherCor.UseVisualStyleBackColor = true;
+            this.btnEscolherCor.Click += new System.EventHandler(this.btnEscolherCor_Click);
             // 
             // label8
             // 
@@ -736,7 +866,7 @@
             this.label8.Location = new System.Drawing.Point(3, 3);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 1;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Tempo";
             // 
             // txtTempoSimulacao
@@ -744,7 +874,7 @@
             this.txtTempoSimulacao.Location = new System.Drawing.Point(6, 19);
             this.txtTempoSimulacao.Name = "txtTempoSimulacao";
             this.txtTempoSimulacao.Size = new System.Drawing.Size(100, 20);
-            this.txtTempoSimulacao.TabIndex = 2;
+            this.txtTempoSimulacao.TabIndex = 1;
             this.txtTempoSimulacao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTempoSimulacao_KeyPress);
             // 
             // label2
@@ -753,7 +883,7 @@
             this.label2.Location = new System.Drawing.Point(113, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Unidade de tempo";
             // 
             // cboUnidadeTempo
@@ -769,15 +899,15 @@
             this.cboUnidadeTempo.Location = new System.Drawing.Point(116, 19);
             this.cboUnidadeTempo.Name = "cboUnidadeTempo";
             this.cboUnidadeTempo.Size = new System.Drawing.Size(147, 21);
-            this.cboUnidadeTempo.TabIndex = 4;
+            this.cboUnidadeTempo.TabIndex = 3;
             // 
             // btnIniciar
             // 
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciar.Location = new System.Drawing.Point(273, 1);
+            this.btnIniciar.Location = new System.Drawing.Point(448, 7);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(115, 40);
-            this.btnIniciar.TabIndex = 0;
+            this.btnIniciar.Size = new System.Drawing.Size(115, 33);
+            this.btnIniciar.TabIndex = 6;
             this.btnIniciar.Text = "Simular";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -789,7 +919,7 @@
             this.pnlEntradaUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEntradaUsuario.Location = new System.Drawing.Point(3, 3);
             this.pnlEntradaUsuario.Name = "pnlEntradaUsuario";
-            this.pnlEntradaUsuario.Size = new System.Drawing.Size(907, 114);
+            this.pnlEntradaUsuario.Size = new System.Drawing.Size(1037, 114);
             this.pnlEntradaUsuario.TabIndex = 0;
             // 
             // panel5
@@ -798,7 +928,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 55);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(907, 59);
+            this.panel5.Size = new System.Drawing.Size(1037, 59);
             this.panel5.TabIndex = 13;
             // 
             // groupBox2
@@ -812,10 +942,38 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(907, 59);
+            this.groupBox2.Size = new System.Drawing.Size(1037, 59);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações para tempos de processamento dos processos (TS)";
+            // 
+            // pnlTempoC
+            // 
+            this.pnlTempoC.Controls.Add(this.txtTempoC);
+            this.pnlTempoC.Controls.Add(this.label6);
+            this.pnlTempoC.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlTempoC.Location = new System.Drawing.Point(448, 16);
+            this.pnlTempoC.Name = "pnlTempoC";
+            this.pnlTempoC.Size = new System.Drawing.Size(89, 40);
+            this.pnlTempoC.TabIndex = 18;
+            // 
+            // txtTempoC
+            // 
+            this.txtTempoC.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtTempoC.Location = new System.Drawing.Point(0, 13);
+            this.txtTempoC.Name = "txtTempoC";
+            this.txtTempoC.Size = new System.Drawing.Size(86, 20);
+            this.txtTempoC.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Entrada C";
             // 
             // pnlTempoB
             // 
@@ -968,7 +1126,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(907, 55);
+            this.panel4.Size = new System.Drawing.Size(1037, 55);
             this.panel4.TabIndex = 12;
             // 
             // grpEntrada
@@ -982,10 +1140,38 @@
             this.grpEntrada.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpEntrada.Location = new System.Drawing.Point(0, 0);
             this.grpEntrada.Name = "grpEntrada";
-            this.grpEntrada.Size = new System.Drawing.Size(907, 55);
+            this.grpEntrada.Size = new System.Drawing.Size(1037, 55);
             this.grpEntrada.TabIndex = 0;
             this.grpEntrada.TabStop = false;
             this.grpEntrada.Text = "Informações para tempos de entrada dos processos (TEC)";
+            // 
+            // pnlC
+            // 
+            this.pnlC.Controls.Add(this.txtEntradaC);
+            this.pnlC.Controls.Add(this.lblEntradaC);
+            this.pnlC.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlC.Location = new System.Drawing.Point(448, 16);
+            this.pnlC.Name = "pnlC";
+            this.pnlC.Size = new System.Drawing.Size(89, 36);
+            this.pnlC.TabIndex = 12;
+            // 
+            // txtEntradaC
+            // 
+            this.txtEntradaC.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtEntradaC.Location = new System.Drawing.Point(0, 13);
+            this.txtEntradaC.Name = "txtEntradaC";
+            this.txtEntradaC.Size = new System.Drawing.Size(86, 20);
+            this.txtEntradaC.TabIndex = 4;
+            // 
+            // lblEntradaC
+            // 
+            this.lblEntradaC.AutoSize = true;
+            this.lblEntradaC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEntradaC.Location = new System.Drawing.Point(0, 0);
+            this.lblEntradaC.Name = "lblEntradaC";
+            this.lblEntradaC.Size = new System.Drawing.Size(54, 13);
+            this.lblEntradaC.TabIndex = 3;
+            this.lblEntradaC.Text = "Entrada C";
             // 
             // pnlB
             // 
@@ -1138,7 +1324,7 @@
             this.tbptabela.Location = new System.Drawing.Point(4, 22);
             this.tbptabela.Name = "tbptabela";
             this.tbptabela.Padding = new System.Windows.Forms.Padding(3);
-            this.tbptabela.Size = new System.Drawing.Size(913, 696);
+            this.tbptabela.Size = new System.Drawing.Size(1043, 620);
             this.tbptabela.TabIndex = 2;
             this.tbptabela.Text = "Tabela";
             this.tbptabela.UseVisualStyleBackColor = true;
@@ -1163,7 +1349,7 @@
             this.grdTabela.Location = new System.Drawing.Point(3, 3);
             this.grdTabela.Name = "grdTabela";
             this.grdTabela.ReadOnly = true;
-            this.grdTabela.Size = new System.Drawing.Size(907, 690);
+            this.grdTabela.Size = new System.Drawing.Size(1037, 614);
             this.grdTabela.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -1225,163 +1411,21 @@
             this.dtsTabela.DataSetName = "dtsTabela";
             this.dtsTabela.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pnlTempoC
+            // dtsTabelaBindingSource
             // 
-            this.pnlTempoC.Controls.Add(this.txtTempoC);
-            this.pnlTempoC.Controls.Add(this.label6);
-            this.pnlTempoC.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlTempoC.Location = new System.Drawing.Point(448, 16);
-            this.pnlTempoC.Name = "pnlTempoC";
-            this.pnlTempoC.Size = new System.Drawing.Size(89, 40);
-            this.pnlTempoC.TabIndex = 18;
+            this.dtsTabelaBindingSource.DataSource = this.dtsTabela;
+            this.dtsTabelaBindingSource.Position = 0;
             // 
-            // txtTempoC
+            // tABELABindingSource
             // 
-            this.txtTempoC.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtTempoC.Location = new System.Drawing.Point(0, 13);
-            this.txtTempoC.Name = "txtTempoC";
-            this.txtTempoC.Size = new System.Drawing.Size(86, 20);
-            this.txtTempoC.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Entrada C";
-            // 
-            // pnlC
-            // 
-            this.pnlC.Controls.Add(this.txtEntradaC);
-            this.pnlC.Controls.Add(this.lblEntradaC);
-            this.pnlC.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlC.Location = new System.Drawing.Point(448, 16);
-            this.pnlC.Name = "pnlC";
-            this.pnlC.Size = new System.Drawing.Size(89, 36);
-            this.pnlC.TabIndex = 12;
-            // 
-            // txtEntradaC
-            // 
-            this.txtEntradaC.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtEntradaC.Location = new System.Drawing.Point(0, 13);
-            this.txtEntradaC.Name = "txtEntradaC";
-            this.txtEntradaC.Size = new System.Drawing.Size(86, 20);
-            this.txtEntradaC.TabIndex = 4;
-            // 
-            // lblEntradaC
-            // 
-            this.lblEntradaC.AutoSize = true;
-            this.lblEntradaC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEntradaC.Location = new System.Drawing.Point(0, 0);
-            this.lblEntradaC.Name = "lblEntradaC";
-            this.lblEntradaC.Size = new System.Drawing.Size(54, 13);
-            this.lblEntradaC.TabIndex = 3;
-            this.lblEntradaC.Text = "Entrada C";
-            // 
-            // lblTempo
-            // 
-            this.lblTempo.AutoSize = true;
-            this.lblTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempo.Location = new System.Drawing.Point(63, 32);
-            this.lblTempo.Name = "lblTempo";
-            this.lblTempo.Size = new System.Drawing.Size(28, 39);
-            this.lblTempo.TabIndex = 6;
-            this.lblTempo.Text = "-";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 13);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Tempo de Simulação";
-            // 
-            // lblTipoTempo
-            // 
-            this.lblTipoTempo.AutoSize = true;
-            this.lblTipoTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoTempo.Location = new System.Drawing.Point(131, 51);
-            this.lblTipoTempo.Name = "lblTipoTempo";
-            this.lblTipoTempo.Size = new System.Drawing.Size(13, 20);
-            this.lblTipoTempo.TabIndex = 8;
-            this.lblTipoTempo.Text = ".";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.lblTipoTempo);
-            this.panel7.Controls.Add(this.lblTempo);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(724, 16);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(176, 151);
-            this.panel7.TabIndex = 9;
-            // 
-            // btnEscolherCor
-            // 
-            this.btnEscolherCor.FlatAppearance.BorderSize = 0;
-            this.btnEscolherCor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscolherCor.Image = global::SimulacaoProcessos.Properties.Resources._125_16x16;
-            this.btnEscolherCor.Location = new System.Drawing.Point(3, 5);
-            this.btnEscolherCor.Name = "btnEscolherCor";
-            this.btnEscolherCor.Size = new System.Drawing.Size(37, 32);
-            this.btnEscolherCor.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnEscolherCor, "Trocar a cor da simulação");
-            this.btnEscolherCor.UseVisualStyleBackColor = true;
-            this.btnEscolherCor.Click += new System.EventHandler(this.btnEscolherCor_Click);
-            // 
-            // pnlCorAtual
-            // 
-            this.pnlCorAtual.BackColor = System.Drawing.Color.GreenYellow;
-            this.pnlCorAtual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCorAtual.Location = new System.Drawing.Point(46, 6);
-            this.pnlCorAtual.Name = "pnlCorAtual";
-            this.pnlCorAtual.Size = new System.Drawing.Size(43, 30);
-            this.pnlCorAtual.TabIndex = 6;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.lblDirecao);
-            this.panel8.Controls.Add(this.cboDirecaoSimulacao);
-            this.panel8.Controls.Add(this.pnlCorAtual);
-            this.panel8.Controls.Add(this.btnEscolherCor);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(656, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(251, 40);
-            this.panel8.TabIndex = 7;
-            // 
-            // cboDirecaoSimulacao
-            // 
-            this.cboDirecaoSimulacao.FormattingEnabled = true;
-            this.cboDirecaoSimulacao.Items.AddRange(new object[] {
-            "TopDown",
-            "LeftToRight",
-            "RightToLeft",
-            "BottomUp"});
-            this.cboDirecaoSimulacao.Location = new System.Drawing.Point(102, 16);
-            this.cboDirecaoSimulacao.Name = "cboDirecaoSimulacao";
-            this.cboDirecaoSimulacao.Size = new System.Drawing.Size(144, 21);
-            this.cboDirecaoSimulacao.TabIndex = 7;
-            // 
-            // lblDirecao
-            // 
-            this.lblDirecao.AutoSize = true;
-            this.lblDirecao.Location = new System.Drawing.Point(99, 0);
-            this.lblDirecao.Name = "lblDirecao";
-            this.lblDirecao.Size = new System.Drawing.Size(109, 13);
-            this.lblDirecao.TabIndex = 8;
-            this.lblDirecao.Text = "Direção da simulação";
+            this.tABELABindingSource.DataMember = "TABELA";
+            this.tABELABindingSource.DataSource = this.dtsTabelaBindingSource;
             // 
             // formSimulacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 722);
+            this.ClientSize = new System.Drawing.Size(1051, 646);
             this.Controls.Add(this.tbcPrincipal);
             this.Name = "formSimulacao";
             this.Text = "Simulação de Processos";
@@ -1390,6 +1434,10 @@
             this.tbcPrincipal.ResumeLayout(false);
             this.tbpInicial.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).EndInit();
             this.pnlConfig.ResumeLayout(false);
             this.pnlOpcoes.ResumeLayout(false);
             this.pnlRight1.ResumeLayout(false);
@@ -1410,6 +1458,8 @@
             this.pnlSimulacao.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.grpFila.ResumeLayout(false);
@@ -1418,9 +1468,13 @@
             this.pnlObjetoExecutando.PerformLayout();
             this.pnlBotoesSimulacao.ResumeLayout(false);
             this.pnlBotoesSimulacao.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.pnlEntradaUsuario.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.pnlTempoC.ResumeLayout(false);
+            this.pnlTempoC.PerformLayout();
             this.pnlTempoB.ResumeLayout(false);
             this.pnlTempoB.PerformLayout();
             this.pnlTempoDesvio.ResumeLayout(false);
@@ -1433,6 +1487,8 @@
             this.pnlTempoLambda.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.grpEntrada.ResumeLayout(false);
+            this.pnlC.ResumeLayout(false);
+            this.pnlC.PerformLayout();
             this.pnlB.ResumeLayout(false);
             this.pnlB.PerformLayout();
             this.pnlDesvio.ResumeLayout(false);
@@ -1447,18 +1503,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdTabela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsoTabela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsTabela)).EndInit();
-            this.pnlTempoC.ResumeLayout(false);
-            this.pnlTempoC.PerformLayout();
-            this.pnlC.ResumeLayout(false);
-            this.pnlC.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoNormal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoUniforme)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoTriangular)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsoExponencial)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtsTabelaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tABELABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1580,6 +1626,10 @@
         private System.Windows.Forms.Label lblDirecao;
         private System.Windows.Forms.ComboBox cboDirecaoSimulacao;
         private System.Windows.Forms.Panel pnlCorAtual;
+        private System.Windows.Forms.ComboBox cboTempoRelatorio;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.BindingSource dtsTabelaBindingSource;
+        private System.Windows.Forms.BindingSource tABELABindingSource;
     }
 }
 
